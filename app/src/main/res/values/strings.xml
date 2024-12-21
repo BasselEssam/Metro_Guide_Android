@@ -1,0 +1,203 @@
+<resources>
+    <string name="app_name">Metro_Guide</string>
+    <string-array name="stations">
+        <item>helwan</item>
+        <item>el-monib</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+        <item>helwan</item>
+        <item>ain helwan</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+        <item>helwan</item>
+        <item>ain helwan</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+        <item>helwan</item>
+        <item>ain helwan</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+        <item>helwan</item>
+        <item>ain helwan</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+        <item>helwan</item>
+        <item>ain helwan</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+        <item>helwan</item>
+        <item>ain helwan</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+        <item>helwan</item>
+        <item>ain helwan</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+        <item>helwan</item>
+        <item>ain helwan</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+        <item>helwan</item>
+        <item>ain helwan</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+        <item>helwan</item>
+        <item>ain helwan</item>
+        <item>helwan university</item>
+        <item>wadi hof</item>
+        <item>hadayek helwan</item>
+        <item>el-maasara</item>
+        <item>tora el-asmant</item>
+        <item>kozzika</item>
+        <item>tora el-balad</item>
+        <item>thakanat el-maadi</item>
+        <item>maadi</item>
+        <item>hadayek el-maadi</item>
+        <item>dar el-salam</item>
+        <item>el-zahraa</item>
+        <item>mar girgis</item>
+        <item>el-malek el-saleh</item>
+        <item>sayeda zeinab</item>
+        <item>saad zaghloul</item>
+    </string-array>
+</resources>
