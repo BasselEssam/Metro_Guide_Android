@@ -89,8 +89,7 @@ class AllSolutions {
         var min=100
         for (i in 0 until separatedSolutions.size){
             var totalStationNumber=0
-            //println("--------Solutin: ${i+1}--------")
-            result+="--------Solutin: ${i+1}--------\n"
+            result+="\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t-------- Route (${i+1}) --------\n"
             for(j in 0 until separatedSolutions[i].size-1){
                 val startStation=separatedSolutions[i][j]
                 val arrivalStation= separatedSolutions[i][j+1]
@@ -109,16 +108,12 @@ class AllSolutions {
                 val endIndex=currentLine.indexOf(arrivalStation)
                 val numberOfStations= abs(endIndex - startIndex)
                 if (endIndex > startIndex) {
-                    //println("Line ${getLineNumber(currentLine)} -> direction: ${currentLine.last()}")
                     result+="Line ${getLineNumber(currentLine)} -> direction: ${currentLine.last()}\n"
                 }
                 else{
-                    //println("Line ${getLineNumber(currentLine)} -> direction: ${currentLine.first()}")
                     result+="Line ${getLineNumber(currentLine)} -> direction: ${currentLine.first()}\n"
                 }
-                //println("number of stations= $numberOfStations")
                 result+="number of stations= $numberOfStations \n"
-                //println("stations: [$startStation -> $arrivalStation] ")
                 result+="stations: [$startStation -> $arrivalStation] \n"
                 totalStationNumber+=numberOfStations
                 previousLine=currentLine
@@ -130,13 +125,13 @@ class AllSolutions {
             //println("Total Number of stations= $totalStationNumber")
             result+="Total Number of stations= $totalStationNumber\n"
             when (totalStationNumber) {
-                in 1..9 -> result+="Ticket Price= 8 EGP ( 4 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
-                in 10..16 -> result+="Ticket Price= 10 EGP ( 5 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
-                in 17..23 -> result+="Ticket Price= 15 EGP ( 8 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
-                else -> result+="Ticket Price= 20 EGP ( 10 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
+                in 1..9 -> result+="Ticket Price= 8 EGP ( 4 EGP for people at 60 or older , military) \n  (5 EGP for Disability)\n"
+                in 10..16 -> result+="Ticket Price= 10 EGP ( 5 EGP for people at 60 or older , military) \n  (5 EGP for Disability)\n"
+                in 17..23 -> result+="Ticket Price= 15 EGP ( 8 EGP for people at 60 or older , military) \n ( 5 EGP for Disability)\n"
+                else -> result+="Ticket Price= 20 EGP ( 10 EGP for people at 60 or older , military) \n  (5 EGP for Disability)\n"
             }
             //println("Estimated Time: ~${totalStationNumber*2} minutes" )
-            result+="Estimated Time: ~${totalStationNumber*2} minutes\n"
+            result+="Estimated Time: ~${totalStationNumber*2} minutes\n \n"
         }
         return result
     }
@@ -147,7 +142,7 @@ class AllSolutions {
         var previousLine=listOf("")
         var totalStationNumber=0
         //println("--------- Shortest Route ---------")
-        result+="--------- Shortest Route ---------\n"
+        result+="\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t--------- Shortest Route ---------\n"
         for(i in 0 until separatedSolutions[minIndex].size-1){
             val startStation=separatedSolutions[minIndex][i]
             val arrivalStation= separatedSolutions[minIndex][i+1]
@@ -188,13 +183,13 @@ class AllSolutions {
         //println("Total Number of stations= $totalStationNumber")
         result+="Total Number of stations= $totalStationNumber \n"
         when (totalStationNumber) {
-            in 1..9 -> result+="Ticket Price= 8 EGP ( 4 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
-            in 10..16 -> result+="Ticket Price= 10 EGP ( 5 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
-            in 17..23 -> result+="Ticket Price= 15 EGP ( 8 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
-            else -> result+="Ticket Price= 20 EGP ( 10 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
+            in 1..9 -> result+="Ticket Price= 8 EGP ( 4 EGP for people at 60 or older , military) \n  (5 EGP for Disability)\n"
+            in 10..16 -> result+="Ticket Price= 10 EGP ( 5 EGP for people at 60 or older , military) \n  (5 EGP for Disability)\n"
+            in 17..23 -> result+="Ticket Price= 15 EGP ( 8 EGP for people at 60 or older , military) \n ( 5 EGP for Disability)\n"
+            else -> result+="Ticket Price= 20 EGP ( 10 EGP for people at 60 or older , military) \n  (5 EGP for Disability)\n"
         }
         //println("Estimated Time: ~${totalStationNumber*2} minutes" )
-        result+="Estimated Time: ~${totalStationNumber*2} minutes\n"
+        result+="Estimated Time: ~${totalStationNumber*2} minutes\n \n"
         return result
     }
 

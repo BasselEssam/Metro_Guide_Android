@@ -1,7 +1,6 @@
 package com.example.metro_guide
 
 import android.os.Build
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import kotlin.math.abs
 
@@ -232,10 +231,10 @@ class Start {
 
 //    ticket calculations
         when (numberOfStations) {
-            in 1..9 -> result+="Ticket Price= 8 EGP ( 4 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
-            in 10..16 -> result+="Ticket Price= 10 EGP ( 5 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
-            in 17..23 -> result+="Ticket Price= 15 EGP ( 8 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
-            else -> result+="Ticket Price= 20 EGP ( 10 EGP for people at age of 60 or older and military / 5 EGP for Disability)\n"
+            in 1..9 -> result+="Ticket Price= 8 EGP ( 4 EGP for people at at 60 or older , military / 5 EGP for Disability)\n"
+            in 10..16 -> result+="Ticket Price= 10 EGP ( 5 EGP for people at at 60 or older , military / 5 EGP for Disability)\n"
+            in 17..23 -> result+="Ticket Price= 15 EGP ( 8 EGP for people at at 60 or older , military / 5 EGP for Disability)\n"
+            else -> result+="Ticket Price= 20 EGP ( 10 EGP for people at 60 or older , military / 5 EGP for Disability)\n"
         }
         return result
     }
