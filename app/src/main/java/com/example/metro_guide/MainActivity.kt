@@ -1,5 +1,6 @@
 package com.example.metro_guide
 
+import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
@@ -12,6 +13,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var arrivalStationSpinner:Spinner
     lateinit var startButton:Button
     lateinit var resultTextView:TextView
+    lateinit var file:SharedPreferences
     val start=Start()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +51,22 @@ class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, allStations)
         startStationSpinner.adapter=adapter
         arrivalStationSpinner.adapter=adapter
+        file=getSharedPreferences("data", MODE_PRIVATE)
+        val startStationPosition=file.getInt("startStation",0)
+        startStationSpinner.setSelection(startStationPosition)
+        val arrivalStationPosition=file.getInt("arrivalStation",0)
+        arrivalStationSpinner.setSelection(arrivalStationPosition)
+        val result=file.getString("result","")
+        resultTextView.text=result
+    }
+
+    override fun onDestroy() {
+        file.edit {
+            putInt("startStation",startStationSpinner.selectedItemPosition)
+            putInt("arrivalStation",arrivalStationSpinner.selectedItemPosition)
+            putString("result",resultTextView.text.toString())
+        }
+        super.onDestroy()
     }
 
     @RequiresApi(Build.VERSION_CODES.N)

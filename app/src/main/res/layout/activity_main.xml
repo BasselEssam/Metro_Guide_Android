@@ -55,7 +55,6 @@
         android:scrollbars="horizontal|vertical"
         android:scrollHorizontally="true"
         android:ellipsize="none"
-        android:singleLine="false"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -160,43 +160,35 @@ class Start {
                     currentLine = line1Stations
                     transiStations = mutableListOf("el-sadat", "gamal abdel-nasser", "el-shohadaa")
                     for (i in 0..2) {
-                        //println("---------Another way---------")
                         allSolutions.tempSolutions.add(mutableListOf())
                         allSolutions.allSolutions.add(mutableListOf())
                         searchStations(
-                            arrivalStation, startStation, transiStations[i], currentLine, allSolutions
-                        )
+                            arrivalStation, startStation, transiStations[i], currentLine, allSolutions)
                     }
                 } else if (line2Stations.contains(startStation)) {
                     currentLine = line2Stations
                     transiStations =
                         mutableListOf("cairo university", "el-sadat", "attaba", "el-shohadaa")
                     for (i in 0..3) {
-                        //println("---------Another way---------")
                         allSolutions.tempSolutions.add(mutableListOf())
                         allSolutions.allSolutions.add(mutableListOf())
-                        searchStations(arrivalStation, startStation, transiStations[i], currentLine, allSolutions
-                        )
+                        searchStations(arrivalStation, startStation, transiStations[i], currentLine, allSolutions)
                     }
                 } else if (line3Stations.contains(startStation)) {
                     currentLine = line3Stations
                     transiStations = mutableListOf("attaba", "gamal abdel-nasser")
                     for (i in 0..1) {
-                        //println("---------Another way---------")
                         allSolutions.tempSolutions.add(mutableListOf())
                         allSolutions.allSolutions.add(mutableListOf())
-                        searchStations(arrivalStation, startStation, transiStations[i], currentLine, allSolutions
-                        )
+                        searchStations(arrivalStation, startStation, transiStations[i], currentLine, allSolutions)
                     }
                 } else {
                     currentLine = line4Stations
                     transiStations = mutableListOf("attaba", "gamal abdel-nasser", "cairo university")
                     for (i in 0..2) {
-                        //println("---------Another way---------")
                         allSolutions.tempSolutions.add(mutableListOf())
                         allSolutions.allSolutions.add(mutableListOf())
-                        searchStations(arrivalStation, startStation, transiStations[i], currentLine, allSolutions
-                        )
+                        searchStations(arrivalStation, startStation, transiStations[i], currentLine, allSolutions)
                     }
                 }
                 allSolutions.classifySolutions(startStation, arrivalStation)
@@ -213,19 +205,13 @@ class Start {
         val startIndex = stations.indexOf(startStation)
         val endIndex = stations.indexOf(arrivalStation)
         val numberOfStations = abs(endIndex - startIndex)
-        //println("number of stations= $numberOfStations")
         result+="number of stations= $numberOfStations\n"
-        //println("estimated time= ${numberOfStations * 2} min")
         result+="estimated time= ${numberOfStations * 2} min\n"
         if (endIndex > startIndex) {
-            //println("direction= ${stations.last()}")
             result+="direction= ${stations.last()}\n"
-            //println("stations: ${stations.slice(startIndex..endIndex)}")
             result+="stations: ${stations.slice(startIndex..endIndex)}\n"
         } else {
-            //println("direction= ${stations.first()}")
             result+="direction= ${stations.first()}\n"
-            //println("stations: ${stations.slice(endIndex..startIndex).reversed()}")
             result+="stations: ${stations.slice(endIndex..startIndex).reversed()}\n"
         }
 
@@ -256,41 +242,20 @@ class Start {
         if (arrivalStation != finalArrivalStation) {
             val startStationModified = arrivalStation
             if (currentLineModified.contains(finalArrivalStation))
-                searchStations(
-                    finalArrivalStation,
-                    startStationModified,
-                    finalArrivalStation,
-                    currentLineModified,
-                    allSolutions
-                )
+                searchStations(finalArrivalStation, startStationModified, finalArrivalStation, currentLineModified, allSolutions)
             else {
                 if (currentLineModified.contains("helwan")) {
                     val transiStations =
                         mutableListOf("el-sadat", "gamal abdel-nasser", "el-shohadaa")
                     for (i in 0..2) {
                         if (startStationModified != transiStations[i] && transiStations[i] != startStation) {
-                            if (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].contains(
-                                    transiStations[i]
-                                )
-                            )
+                            if (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].contains(transiStations[i]))
                                 return
-                            searchStations(
-                                finalArrivalStation,
-                                startStationModified,
-                                transiStations[i],
-                                currentLineModified,
-                                allSolutions
-                            )
-                            if (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].contains(
-                                    transiStations[i]
-                                )
-                            ) {
+                            searchStations(finalArrivalStation, startStationModified, transiStations[i], currentLineModified, allSolutions)
+                            if (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].contains(transiStations[i])) {
                                 allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].subList(
-                                    allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].indexOf(
-                                        transiStations[i]
-                                    ),
-                                    (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].lastIndex) + 1
-                                ).clear()
+                                    allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].indexOf(transiStations[i]),
+                                    (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].lastIndex) + 1).clear()
                             }
                         }
                     }
@@ -299,28 +264,13 @@ class Start {
                         mutableListOf("cairo university", "el-sadat", "attaba", "el-shohadaa")
                     for (i in 0..3) {
                         if (startStationModified != transiStations[i] && transiStations[i] != startStation) {
-                            if (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].contains(
-                                    transiStations[i]
-                                )
-                            )
+                            if (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].contains(transiStations[i]))
                                 return
-                            searchStations(
-                                finalArrivalStation,
-                                startStationModified,
-                                transiStations[i],
-                                currentLineModified,
-                                allSolutions
-                            )
-                            if (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].contains(
-                                    transiStations[i]
-                                )
-                            ) {
+                            searchStations(finalArrivalStation, startStationModified, transiStations[i], currentLineModified, allSolutions)
+                            if (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].contains(transiStations[i])) {
                                 allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].subList(
-                                    allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].indexOf(
-                                        transiStations[i]
-                                    ),
-                                    (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].lastIndex) + 1
-                                ).clear()
+                                    allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].indexOf(transiStations[i]),
+                                    (allSolutions.tempSolutions[allSolutions.tempSolutions.lastIndex].lastIndex) + 1).clear()
                             }
                         }
                     }
